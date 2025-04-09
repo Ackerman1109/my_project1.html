@@ -3,18 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Интерактивная фотогалерея</title>
+    <title>Доступная интерактивная фотогалерея</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body onload="initGallery()">
     <h1>Интерактивная фотогалерея</h1>
     <div id="image">
-        Наведите курсор на изображение ниже, чтобы отобразить его здесь
+        Наведите курсор или используйте клавишу Tab для просмотра изображений
     </div>
     <div class="gallery">
-        <img src="https://via.placeholder.com/150" alt="Пейзаж с горами" onmouseover="upDate(this)" onmouseout="unDo()">
-        <img src="https://via.placeholder.com/150/FF0000" alt="Закат над морем" onmouseover="upDate(this)" onmouseout="unDo()">
-        <img src="https://via.placeholder.com/150/00FF00" alt="Лес в тумане" onmouseover="upDate(this)" onmouseout="unDo()">
+        <img src="https://via.placeholder.com/150/FF0000" alt="Красный закат над морем" 
+             onmouseover="upDate(this)" onmouseout="unDo()" onfocus="upDate(this)" onblur="unDo()">
+        <img src="https://via.placeholder.com/150/00FF00" alt="Зеленый лес в тумане" 
+             onmouseover="upDate(this)" onmouseout="unDo()" onfocus="upDate(this)" onblur="unDo()">
+        <img src="https://via.placeholder.com/150/0000FF" alt="Синие горы зимой" 
+             onmouseover="upDate(this)" onmouseout="unDo()" onfocus="upDate(this)" onblur="unDo()">
+        <img src="https://via.placeholder.com/150/FFFF00" alt="Желтые цветы в поле" 
+             onmouseover="upDate(this)" onmouseout="unDo()" onfocus="upDate(this)" onblur="unDo()">
+        <img src="https://via.placeholder.com/150/FF00FF" alt="Фиолетовый городской пейзаж" 
+             onmouseover="upDate(this)" onmouseout="unDo()" onfocus="upDate(this)" onblur="unDo()">
+        <img src="https://via.placeholder.com/150/00FFFF" alt="Бирюзовый океан" 
+             onmouseover="upDate(this)" onmouseout="unDo()" onfocus="upDate(this)" onblur="unDo()">
     </div>
     <script src="script.js"></script>
 </body>

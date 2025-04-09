@@ -22,6 +22,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .gallery img {
@@ -29,4 +30,8 @@ body {
     height: 150px;
     border: 1px solid #666;
     cursor: pointer;
+}
+
+.gallery img:focus {
+    outline: 3px solid #00f;
 }
