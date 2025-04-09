@@ -3,29 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная страница</title>
+    <title>Интерактивная фотогалерея</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Перейти к основному содержимому</a>
-    <nav class="main-nav">
-        <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="gallery.html">Галерея</a></li>
-            <li><a href="about.html">О нас</a></li>
-        </ul>
-    </nav>
-    <main id="main-content">
-        <h1>Добро пожаловать!</h1>
-        <section class="grid-container">
-            <div class="grid-item">
-                <img src="https://via.placeholder.com/300x200" alt="Пейзаж с горами">
-                <p>Красивый пейзаж</p>
-            </div>
-            <div class="grid-item">
-                <p>Этот сайт демонстрирует мои навыки CSS.</p>
-            </div>
-        </section>
-    </main>
+    <h1>Интерактивная фотогалерея</h1>
+    <div id="image">
+        Наведите курсор на изображение ниже, чтобы отобразить его здесь
+    </div>
+    <div class="gallery">
+        <img src="https://via.placeholder.com/150" alt="Пейзаж с горами" onmouseover="upDate(this)" onmouseout="unDo()">
+        <img src="https://via.placeholder.com/150/FF0000" alt="Закат над морем" onmouseover="upDate(this)" onmouseout="unDo()">
+        <img src="https://via.placeholder.com/150/00FF00" alt="Лес в тумане" onmouseover="upDate(this)" onmouseout="unDo()">
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
