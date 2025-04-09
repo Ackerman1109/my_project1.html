@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Доступная интерактивная фотогалерея</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Отзывчивая фотогалерея</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body onload="initGallery()">
-    <h1>Интерактивная фотогалерея</h1>
-    <div id="image">
-        Наведите курсор или используйте клавишу Tab для просмотра изображений
-    </div>
-    <div class="gallery">
-        <img src="https://via.placeholder.com/150/FF0000" alt="Красный закат над морем" 
-             onmouseover="upDate(this)" onmouseout="unDo()" onfocus="upDate(this)" onblur="unDo()">
-        <img src="https://via.placeholder.com/150/00FF00" alt="Зеленый лес в тумане" 
-             onmouseover="upDate(this)" onmouseout="unDo()" onfocus="upDate(this)" onblur="unDo()">
-        <img src="https://via.placeholder.com/150/0000FF" alt="Синие горы зимой" 
-             onmouseover="upDate(this)" onmouseout="unDo()" onfocus="upDate(this)" onblur="unDo()">
-        <img src="https://via.placeholder.com/150/FFFF00" alt="Желтые цветы в поле" 
-             onmouseover="upDate(this)" onmouseout="unDo()" onfocus="upDate(this)" onblur="unDo()">
-        <img src="https://via.placeholder.com/150/FF00FF" alt="Фиолетовый городской пейзаж" 
-             onmouseover="upDate(this)" onmouseout="unDo()" onfocus="upDate(this)" onblur="unDo()">
-        <img src="https://via.placeholder.com/150/00FFFF" alt="Бирюзовый океан" 
-             onmouseover="upDate(this)" onmouseout="unDo()" onfocus="upDate(this)" onblur="unDo()">
-    </div>
-    <script src="script.js"></script>
+<body>
+    <h1>Моя отзывчивая галерея</h1>
+    <main class="gallery">
+        <div class="item">
+            <img src="https://via.placeholder.com/300/FF0000" alt="Красный закат над морем">
+            <p>Закат над морем вдохновляет на отдых.</p>
+        </div>
+        <div class="item">
+            <img src="https://via.placeholder.com/300/00FF00" alt="Зеленый лес в тумане">
+            <p>Туманный лес полон загадок.</p>
+        </div>
+        <div class="item">
+            <img src="https://via.placeholder.com/300/0000FF" alt="Синие горы зимой">
+            <p>Зимние горы идеальны для лыж.</p>
+        </div>
+        <div class="item">
+            <img src="https://via.placeholder.com/300/FFFF00" alt="Желтые цветы в поле">
+            <p>Поле цветов радует глаз.</p>
+        </div>
+    </main>
 </body>
 </html>

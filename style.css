@@ -1,0 +1,92 @@
+/* Mobile-first подход */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.item {
+    background-color: #fff;
+    border: 2px solid #666;
+    padding: 15px;
+    scroll-behavior: smooth;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+}
+
+.item p {
+    margin: 10px 0 0;
+    color: #333;
+}
+
+/* Медиа-запрос для планшетов (772px и больше) */
+@media screen and (min-width: 772px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .item {
+        border-radius: 50%;
+    }
+
+    .item:last-child {
+        grid-column: span 2;
+    }
+}
+
+/* Медиа-запрос для больших экранов (992px и больше) */
+@media screen and (min-width: 992px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .item {
+        border-radius: 0; /* Удаляем радиус границы */
+    }
+
+    .item:nth-child(3n) {
+        grid-column: span 2; /* Каждую третью фигуру растягиваем на обе колонки */
+    }
+}
+
+/* Медиа-запрос для prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+    .item {
+        scroll-behavior: auto; /* Убираем плавную прокрутку */
+    }
+}
+
+/* Медиа-запрос для темной цветовой схемы */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #333;
+    }
+
+    h1 {
+        color: #fff;
+    }
+
+    .item {
+        background-color: #555;
+        border-color: #000;
+    }
+
+    .item p {
+        color: #ffd700; /* Желтоватый цвет текста */
+    }
+}
